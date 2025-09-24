@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Bewy Tipiquero - Suéteres de Fútbol Exclusivos</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #000000;
+            --color-secondary: #333333;
+            --color-accent: #FFD700;
+            --color-light: #ffffff;
+            --color-background: #f8f9fa;
+            --color-card-shadow: rgba(0, 0, 0, 0.08);
+            --font-primary: 'Roboto', sans-serif;
+            --font-secondary: 'Montserrat', sans-serif;
+            --border-radius: 12px;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--color-background);
+            color: var(--color-primary);
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 🎨 HEADER OPTIMIZADO PARA MÓVIL */
+        header {
+            background: linear-gradient(135deg, var(--color-light) 0%, #f8f9fa 100%);
+            color: var(--color-primary);
+            padding: var(--spacing-sm) var(--spacing-sm);
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        header .logo {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 4px;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.1));
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: var(--font-secondary);
+            line-height: 1.2;
+        }
+
+        header p {
+            margin: 2px 0 0;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--color-secondary);
+            line-height: 1.3;
+        }
+
+        .social-icons-header {
+            margin-top: var(--spacing-xs);
+        }
+
+        .social-icons-header a {
+            color: var(--color-secondary);
+            font-size: 1.1rem;
+            margin: 0 var(--spacing-xs);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 6px;
+            border-radius: 50%;
+        }
+
+        .social-icons-header a:hover {
+            color: var(--color-accent);
+            transform: translateY(-2px);
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        /* 📐 RESPONSIVE DESIGN OPTIMIZADO */
+        nav {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            padding: 8px var(--spacing-xs);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        nav a {
+            color: var(--color-light);
+            text-decoration: none;
+            margin: 2px 4px;
+            font-weight: 600;
+            font-size: 0.7rem;
+            transition: all 0.3s ease;
+            padding: 6px 8px;
+            border-radius: 16px;
+        }
+
+        nav a:hover {
+            color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .contenedor {
+            padding: var(--spacing-md) var(--spacing-xs);
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            font-family: var(--font-secondary);
+            position: relative;
+            padding-bottom: var(--spacing-xs);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-accent), #f0c14b);
+            border-radius: 2px;
+        }
+        
+        #sobre-nosotros {
+            background: var(--color-light);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            box-shadow: 0 4px 15px var(--color-card-shadow);
+            margin-bottom: var(--spacing-lg);
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        #sobre-nosotros p {
+            color: var(--color-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.9rem;
+        }
+        
+        #sobre-nosotros .hashtag {
+            font-style: italic;
+            color: #777;
+            margin-top: var(--spacing-md);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .versiculo {
+            font-style: italic;
+            color: var(--color-secondary);
+            font-size: 0.8rem;
+            margin: var(--spacing-md) 0;
+            opacity: 0.9;
+            padding: var(--spacing-sm);
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid var(--color-accent);
+        }
+
+        /* 📱 GRID DE PRODUCTOS PROFESIONAL */
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xs);
+            margin-top: var(--spacing-lg);
+            padding: 0 2px;
+        }
+        
+        /* MEDIA QUERY PARA TABLETS */
+        @media (min-width: 768px) {
+            .productos {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--spacing-sm);
+            }
+        }
+
+        /* MEDIA QUERY PARA ESCRITORIO */
+        @media (min-width: 1200px) {
+            .productos {
+                grid-template-columns: repeat(4, 1fr);
+                gap: var(--spacing-md);
+            }
+        }
+
+        /* 🛍️ TARJETAS DE PRODUCTO PROFESIONALES */
+        .producto {
+            background: var(--color-light);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .producto:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .imagen-container {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px 12px 0 0;
+        }
+
+        .producto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .producto:hover img {
+            transform: scale(1.05);
+        }
+
+        .producto-info {
+            padding: var(--spacing-xs);
+            text-align: left;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .producto-info h3 {
+            color: var(--color-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+            font-family: var(--font-secondary);
+            line-height: 1.2;
+        }
+
+        .descripcion-producto {
+            color: #666;
+            margin-bottom: var(--spacing-xs);
+            font-size: 0.65rem;
+            line-height: 1.3;
+            flex: 1;
+        }
+
+        .detalles-producto {
+            background: #f8f9fa;
+            padding: 4px 6px;
+            border-radius: 6px;
+            margin-bottom: var(--spacing-xs);
+            border-left: 2px solid var(--color-accent);
+        }
+
+        .detalles-producto h4 {
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            font-size: 0.6rem;
+            margin-bottom: 1px;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+        }
+        
+        .detalles-producto p {
+            margin: 0;
+            font-size: 0.6rem;
+            line-height: 1.2;
+            color: var(--color-secondary);
+            font-weight: 500;
+        }
+
+        .precio {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 6px;
+            font-family: var(--font-secondary);
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: var(--color-light);
+            padding: 6px var(--spacing-xs);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.65rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 4px rgba(0, 123, 255, 0.2);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+        }
+
+        /* AJUSTE DE TAMAÑO DE FUENTE PARA SECCIONES DESPUÉS DE PRODUCTOS */
+        .informacion-pago, #faq {
+            background: var(--color-light);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            box-shadow: 0 8px 30px var(--color-card-shadow);
+            margin-top: var(--spacing-xl);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .informacion-pago h2, #faq h2 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            font-family: var(--font-secondary);
+            text-align: center;
+        }
+
+        .informacion-pago h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-primary);
+        }
+
+        .informacion-pago p, .informacion-pago ul {
+            color: var(--color-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        .informacion-pago ul {
+            margin-left: var(--spacing-lg);
+            list-style-type: disc;
+        }
+
+        .informacion-pago li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .informacion-pago .final-mensaje {
+            text-align: center;
+            font-style: italic;
+            font-weight: 600;
+            color: #555;
+            margin-top: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .faq-item {
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .faq-item h3 {
+            color: var(--color-primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            font-family: var(--font-secondary);
+        }
+
+        .faq-item p {
+            color: var(--color-secondary);
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .contacto {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+            padding: var(--spacing-xl);
+            background: var(--color-light);
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 30px var(--color-card-shadow);
+        }
+
+        .contacto h2 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            font-family: var(--font-secondary);
+        }
+
+        .contacto p {
+            font-size: 0.9rem;
+        }
+
+        .contacto a {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: var(--color-light);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin: var(--spacing-xs);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contacto a:hover {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, #222 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: var(--color-light);
+            text-align: center;
+            padding: var(--spacing-xl) var(--spacing-sm);
+            margin-top: var(--spacing-xl);
+            font-size: 0.75rem;
+        }
+
+        footer p {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        footer a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 var(--spacing-xs);
+        }
+
+        footer a:hover {
+            color: #e0b800;
+        }
+
+        .social-icons-footer {
+            margin-top: var(--spacing-md);
+        }
+
+        .social-icons-footer a {
+            color: var(--color-light);
+            font-size: 1.4rem;
+            margin: 0 var(--spacing-sm);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .social-icons-footer a:hover {
+            color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Estilos para el texto que se desplaza */
+        .scrolling-text-container {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: var(--spacing-md);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .scrolling-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-text 20s linear infinite;
+            font-weight: 600;
+            color: var(--color-secondary);
+        }
+
+        @keyframes scroll-text {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        /* Estilos para la nueva sección de referidos */
+        #referidos {
+            margin-top: var(--spacing-xl);
+        }
+
+        .referidos-card {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 10px 35px var(--color-card-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .referidos-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-accent), #f0c14b);
+        }
+
+        .referidos-card h3 {
+            color: var(--color-primary);
+            font-family: var(--font-secondary);
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .referidos-card p {
+            font-size: 0.9rem;
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+        }
+
+        /* Estilos para el zoom de la imagen */
+        #image-zoom-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+        }
+
+        #zoomed-image {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilos para iconos como respaldo si Font Awesome no carga */
+        .social-icon-fallback {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .whatsapp-fallback {
+            background: #25D366;
+            color: white;
+        }
+
+        .instagram-fallback {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            color: white;
+        }
+
+        /* Mejorar visibilidad de iconos */
+        .social-icons-header a, .social-icons-footer a {
+            position: relative;
+        }
+
+        .social-icons-header a::before, .social-icons-footer a::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icons-header a:hover::before, .social-icons-footer a:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .producto {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .producto:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+
+        .producto:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+
+        /* MEDIA QUERIES ESPECÍFICAS PARA DIFERENTES TAMAÑOS */
+        @media (min-width: 480px) {
+            .contenedor {
+                padding: var(--spacing-md) var(--spacing-sm);
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            header .logo {
+                max-width: 160px;
+            }
+            
+            .producto-info h3 {
+                font-size: 0.85rem;
+            }
+            
+            .btn {
+                font-size: 0.7rem;
+                padding: 8px var(--spacing-xs);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .contenedor {
+                padding: var(--spacing-lg) var(--spacing-sm);
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: var(--spacing-xl);
+            }
+            
+            header {
+                padding: var(--spacing-sm) var(--spacing-sm);
+            }
+            
+            header .logo {
+                max-width: 180px;
+            }
+            
+            header h1 {
+                font-size: 1.4rem;
+            }
+            
+            header p {
+                font-size: 0.8rem;
+            }
+            
+            nav {
+                padding: var(--spacing-xs) var(--spacing-sm);
+            }
+            
+            nav a {
+                font-size: 0.8rem;
+                margin: var(--spacing-xs) 6px;
+                padding: 8px 12px;
+            }
+            
+            .producto-info {
+                padding: var(--spacing-sm);
+            }
+            
+            .producto-info h3 {
+                font-size: 0.9rem;
+            }
+            
+            .precio {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                font-size: 0.75rem;
+                padding: 10px var(--spacing-sm);
+            }
+
+            .informacion-pago h2, #faq h2 {
+                font-size: 1.6rem;
+            }
+
+            .informacion-pago h3 {
+                font-size: 1.2rem;
+            }
+
+            .informacion-pago p, .informacion-pago ul {
+                font-size: 0.9rem;
+            }
+
+            .faq-item h3 {
+                font-size: 1rem;
+            }
+
+            .faq-item p {
+                font-size: 0.85rem;
+            }
+
+            .contacto h2 {
+                font-size: 1.6rem;
+            }
+
+            .contacto p {
+                font-size: 0.95rem;
+            }
+
+            .contacto a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            header .logo {
+                max-width: 220px;
+            }
+            
+            header h1 {
+                font-size: 1.6rem;
+            }
+            
+            header p {
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .producto-info h3 {
+                font-size: 1rem;
+            }
+            
+            .descripcion-producto {
+                font-size: 0.8rem;
+            }
+            
+            .precio {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                font-size: 0.8rem;
+                padding: 12px var(--spacing-sm);
+            }
+
+            .informacion-pago h2, #faq h2 {
+                font-size: 1.8rem;
+            }
+
+            .informacion-pago h3 {
+                font-size: 1.3rem;
+            }
+
+            .informacion-pago p, .informacion-pago ul {
+                font-size: 1rem;
+            }
+
+            .faq-item h3 {
+                font-size: 1.1rem;
+            }
+
+            .faq-item p {
+                font-size: 1rem;
+            }
+
+            .contacto h2 {
+                font-size: 1.8rem;
+            }
+
+            .contacto p {
+                font-size: 1.1rem;
+            }
+
+            .contacto a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo1.png" alt="Logo El Bewy Tipiquero" class="logo">
+        <p>Suéteres de Fútbol - Envíos a todo Panamá</p>
+        <div class="social-icons-header">
+            <a href="https://wa.me/50761714394" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="social-icon-fallback whatsapp-fallback" style="display: none;">W</span>
+            </a>
+            <a href="https://www.instagram.com/elbewytipiquero" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+                <span class="social-icon-fallback instagram-fallback" style="display: none;">IG</span>
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#productos">Productos</a>
+        <a href="#sobre-nosotros">Sobre Nosotros</a>
+        <a href="#pago">Información de Pago y Envío</a>
+        <a href="#faq">Preguntas Frecuentes</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="contenedor" id="productos">
+        <h2 class="section-title">Nuestros Suéteres</h2>
+        <div class="scrolling-text-container">
+            <span class="scrolling-text">✨ Explora nuestra colección de camisetas de los equipos más grandes del mundo • ¡Cada suéter es una pieza de colección! ✨</span>
+        </div>
+        <div class="productos">
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0005.jpg" alt="Suéter retro del Real Madrid" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Real Madrid - Suéter Retro</h3>
+                    <p class="descripcion-producto">Diseño de visitante clásico con rayas en relieve.</p>
+                    <div class="detalles-producto">
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20retro%20del%20Real%20Madrid." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0011.jpg" alt="Suéter local del Chelsea FC" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Chelsea FC - Suéter Local</h3>
+                    <p class="descripcion-producto">El clásico suéter local del Chelsea.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugador:</h4>
+                        <p>Palmer #10</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20local%20del%20Chelsea%20edici%C3%B3n%20Palmer%20%2310." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0003.jpg" alt="Suéter de Inter de Milán" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Inter de Milán - Suéter Local</h3>
+                    <p class="descripcion-producto">Icónico diseño Nerazzurri.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Thuram #9, Lautaro #10</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20del%20Inter%20de%20Mil%C3%A1n." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0009.jpg" alt="Suéter de la Juventus" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Juventus - Suéter Local</h3>
+                    <p class="descripcion-producto">Diseño clásico a rayas con detalles en rosa.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Vlahović #9, Yildiz #10</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20la%20Juventus." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0014.jpg" alt="Suéter de local del Arsenal" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Arsenal FC - Suéter de Local</h3>
+                    <p class="descripcion-producto">El tradicional suéter rojo de los Gunners.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Ødegaard #8, Saka #7</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20local%20del%20Arsenal%20FC." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0004.jpg" alt="Suéter de local del Real Madrid" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Real Madrid - Home Kit</h3>
+                    <p class="descripcion-producto">El suéter de local blanco, un clásico.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Vinicius Jr. #7, Mbappé #10, Bellingham #5</p>
+                        <h4>Tallas adulto:</h4>
+                        <p>S, M, L, XL</p>
+                        <h4>Tallas de niños:</h4>
+                        <p>2-18</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20local%20del%20Real%20Madrid." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0006.jpg" alt="Suéter de visita del FC Barcelona" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>FC Barcelona - Suéter de visita</h3>
+                    <p class="descripcion-producto">Innovador diseño color crema.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Raphinha #11, Lamine Yamal #10</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20visita%20del%20FC%20Barcelona." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0012.jpg" alt="Suéter de local del Bayern Munich" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Bayern Munich - Visitante</h3>
+                    <p class="descripcion-producto">El suéter de visitante blanco con un diseño atrevido.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugador:</h4>
+                        <p>Kane #9</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20visitante%20del%20Bayern%20Munich." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0008.jpg" alt="Suéter de local del AC Milán" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>AC Milán - Home Kit</h3>
+                    <p class="descripcion-producto">El emblemático suéter Rossoneri.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Leão #10, Modrić #14</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20local%20del%20AC%20Mil%C3%A1n." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0002.jpg" alt="Suéter de visita del Real Madrid" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Real Madrid - Suéter de Visita</h3>
+                    <p class="descripcion-producto">Elegante diseño en azul oscuro.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Vinicius Jr. #7, Mbappé #10, Bellingham #5</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20visita%20del%20Real%20Madrid." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0015.jpg" alt="Suéter de local del FC Barcelona" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>FC Barcelona - Home Kit</h3>
+                    <p class="descripcion-producto">El suéter con las rayas clásicas blaugrana.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Lamine Yamal #10, Lewandowski #9, Rafinha #11</p>
+                        <h4>Tallas adulto:</h4>
+                        <p>S, M, L, XL</p>
+                        <h4>Tallas de niños:</h4>
+                        <p>2-18</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20local%20del%20FC%20Barcelona." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0013.jpg" alt="Suéter de visita del Bayern Munich" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Bayern Munich - Suéter de Visita</h3>
+                    <p class="descripcion-producto">Un diseño vibrante con detalles en rojo.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Musiala #10, Kane #9</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20visita%20del%20Bayern%20Munich." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0007.jpg" alt="Suéter de local del Manchester United" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Manchester United - Home Kit</h3>
+                    <p class="descripcion-producto">El icónico suéter rojo de los Red Devils.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugadores:</h4>
+                        <p>Garnacho #17, Fernandes #8</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20local%20del%20Manchester%20United." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagen-container">
+                    <img src="IMG-20250806-WA0010.jpg" alt="Suéter de visita del Chelsea FC" class="zoomable-image">
+                </div>
+                <div class="producto-info">
+                    <h3>Chelsea FC - Suéter de Visita</h3>
+                    <p class="descripcion-producto">Diseño alternativo elegante en blanco.</p>
+                    <div class="detalles-producto">
+                        <h4>Jugador:</h4>
+                        <p>Palmer #10</p>
+                        <h4>Tallas:</h4>
+                        <p>S, M, L, XL</p>
+                    </div>
+                    <p class="precio">$35.00</p>
+                    <a href="https://wa.me/50761714394?text=Hola,%20estoy%20interesado%20en%20el%20su%C3%A9ter%20de%20visita%20del%20Chelsea%20edici%C3%B3n%20Palmer%20%2310." class="btn" target="_blank">reserva ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="contenedor" id="sobre-nosotros">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <p>Todo empezó con una idea y un par de suéteres... Hoy somos El Bewy Tipiquero, una cuenta pequeña pero con grandes ganas de crecer. Vendemos suéteres de fútbol con estilo, pa' los que viven el deporte y la calle con flow.</p>
+        <p>Gracias a los que ya nos apoyan, y bienvenido el que quiera ser parte del movimiento. Cada suéter que vendemos es más que una prenda: es una forma de llevar tu pasión a todas partes y de ser parte de este movimiento que crece cada día. Gracias por confiar en nosotros y por ayudarnos a llevar el fútbol y el flow a las calles de Panamá.</p>
+        <p class="versiculo">"Confía en el Señor con todo tu corazón; no dependas de tu propio entendimiento. Busca su voluntad en todo lo que hagas, y él te mostrará cuál camino tomar." <br>Proverbios 3:5-6</p>
+        <p class="hashtag">#Elbewytipiquero</p>
+    </div>
+
+    <div class="contenedor informacion-pago" id="pago">
+        <h2 class="section-title">Información de Pago y Envío</h2>
+        <h3>Proceso de Pedido</h3>
+        <p>TODOS LOS SUÉTERES SON POR ENCARGO.</p>
+        <p>Se requiere un abono de $10 en adelante para confirmar su pedido.</p>
+        <p><strong>No hacemos pedidos sin el abono inicial.</strong></p>
+        <p>El resto <span style="color: var(--color-accent); font-weight: 700;font-size: 1.2rem;">se cancela contraentrega</span>, al recibir su producto.</p>
+        <p>El tiempo de espera es de aproximadamente <span style="color: var(--color-accent); font-weight: 700;font-size: 1.2rem;">15 días hábiles</span>.</p>
+        <p><strong>IMPORTANTE:</strong> Los días hábiles no incluyen fines de semana ni feriados.</p>
+        <h3>Formas de Pago</h3>
+        <p>Aceptamos pagos a través de Yappy y en efectivo.</p>
+        <h3>Punto de Entrega</h3>
+        <p>Las entregas se realizan en puntos céntricos de la ciudad.</p>
+        <p>Por respeto a tu tiempo y el nuestro, esperaremos un máximo de 20 minutos en el punto de entrega.</p>
+        <p class="final-mensaje">¡Todo esto es para darte un mejor servicio y que quedes 100% feliz con tu pedido!</p>
+    </div>
+
+    <div class="contenedor" id="faq">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <h3>¿Cuál es el proceso para realizar un pedido?</h3>
+            <p>Para realizar un pedido, puedes hacer clic en el botón "Comprar ahora" debajo del suéter que te interese. Esto te dirigirá a WhatsApp, donde podrás especificar tu pedido y coordinar el pago.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Cuáles son los métodos de pago aceptados?</h3>
+            <p>Aceptamos pagos a través de Yappy y transferencias bancarias en Panamá.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Cuál es el costo y tiempo de envío?</h3>
+            <p>Toda entrega es gratuita en cualquier estación del metro de la línea 1. Para envíos, el costo varía según su ubicación. El tiempo estimado de entrega se informará una vez confirmado tu pedido.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Puedo hacer un cambio o devolución?</h3>
+            <p>Aceptamos devoluciones solo en caso de defectos de fábrica dentro de los 7 días posteriores a la entrega. Para cambios de talla, evaluamos cada caso individualmente.</p>
+        </div>
+    </div>
+
+    <div class="contenedor" id="referidos">
+        <h2 class="section-title">¡Refiere y Gana!</h2>
+        <div class="referidos-card">
+            <h3>Comparte la Experiencia, Gana un Descuento</h3>
+            <p>¿Te encantan nuestros suéteres? ¡Comparte la pasión con tus amigos!</p>
+            <p style="font-weight: bold; color: var(--color-primary);">
+                Al referir a un amigo que compre, obtienes un <span style="font-size: 1.5rem; color: var(--color-accent);">10% de descuento</span> en tu próxima compra.
+            </p>
+            <p style="font-size: 0.9rem; color: #777; margin-top: var(--spacing-md);">
+                ¡Es muy fácil! Pide a tu amigo que mencione tu nombre al hacer su pedido.
+            </p>
+            <a href="javascript:void(0);" onclick="sharePage()" class="btn" style="background: linear-gradient(135deg, var(--color-accent) 0%, #f0c14b 100%); color: var(--color-primary); margin-top: var(--spacing-md);">¡Quiero referir a un amigo!</a>
+        </div>
+    </div>
+    
+    <div class="contenedor contacto" id="contacto">
+        <h2 class="section-title">¡Contáctanos!</h2>
+        <p style="margin-bottom: var(--spacing-lg); font-size: 1.1rem;">Realiza tu pedido o consulta cualquier duda:</p>
+        <a href="https://wa.me/50761714394" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="social-icon-fallback whatsapp-fallback" style="display: none;">W</span>
+            WhatsApp
+        </a>
+        <a href="https://www.instagram.com/elbewytipiquero" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span class="social-icon-fallback instagram-fallback" style="display: none;">IG</span>
+            Instagram
+        </a>
+        <p style="margin-top: var(--spacing-md);">También puedes contactarnos por teléfono al <strong>6171-4394</strong>.</p>
+    </div>
+
+    <footer>
+        <p>Envíos a todo Panamá 🇵🇦</p>
+        <p>© 2025 El Bewy Tipiquero. Todos los derechos reservados.</p>
+        <div class="social-icons-footer">
+            <a href="https://wa.me/50761714394" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="social-icon-fallback whatsapp-fallback" style="display: none;">W</span>
+            </a>
+            <a href="https://www.instagram.com/elbewytipiquero" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+                <span class="social-icon-fallback instagram-fallback" style="display: none;">IG</span>
+            </a>
+        </div>
+        <p>¡Síguenos en Instagram <a href="https://www.instagram.com/elbewytipiquero" target="_blank">@elbewytipiquero</a>!</p>
+    </footer>
+
+    <div id="image-zoom-overlay" onclick="closeZoom()">
+        <img id="zoomed-image" src="" alt="Imagen Ampliada">
+    </div>
+
+    <script>
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'El Bewy Tipiquero',
+                    text: '¡Mira estos suéteres de fútbol que me encantan! Tienen diseños exclusivos y hacen envíos a todo Panamá. ¡Échales un ojo!',
+                    url: window.location.href
+                }).then(() => {
+                    console.log('¡Compartido con éxito!');
+                }).catch((error) => {
+                    console.error('Error al compartir:', error);
+                });
+            } else {
+                // Mensaje para navegadores que no soportan la función (generalmente en PC)
+                alert('Copia este enlace para compartir con tus amigos: ' + window.location.href);
+            }
+        }
+
+        // Funcionalidad para el zoom de imágenes
+        const zoomableImages = document.querySelectorAll('.zoomable-image');
+        const zoomOverlay = document.getElementById('image-zoom-overlay');
+        const zoomedImage = document.getElementById('zoomed-image');
+
+        zoomableImages.forEach(img => {
+            img.addEventListener('click', function(event) {
+                event.stopPropagation();
+                zoomedImage.src = this.src;
+                zoomOverlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+            });
+        });
+
+        function closeZoom() {
+            zoomOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restaurar scroll del body
+        }
+
+        // Cerrar zoom con tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeZoom();
+            }
+        });
+
+        // Animación de entrada para los productos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos los productos para animaciones
+        document.querySelectorAll('.producto').forEach((producto) => {
+            producto.style.opacity = '0';
+            producto.style.transform = 'translateY(30px)';
+            producto.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(producto);
+        });
+    </script>
+</body>
+</html>
